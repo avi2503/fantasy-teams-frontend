@@ -1,0 +1,19 @@
+.selectedTeam {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamDetailsSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 60rem;
+  height: 30rem;
+  opacity: 0.9;
+  color: white;
+}
