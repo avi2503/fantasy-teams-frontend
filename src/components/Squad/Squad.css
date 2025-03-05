@@ -1,6 +1,10 @@
 .sqaudCard {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  width: 78rem;
+  height: 18rem;
+  margin: 1rem 0;
+  overflow-y: auto;
 }

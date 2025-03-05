@@ -12,8 +12,18 @@
   align-items: center;
   padding: 2rem;
   border-radius: 5px;
-  width: 60rem;
-  height: 30rem;
-  opacity: 0.9;
+  width: 78rem;
   color: white;
+}
+
+.rowHeader {
+  width: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rowData {
+  width: 25rem;
+  padding-left: 0.5rem;
 }

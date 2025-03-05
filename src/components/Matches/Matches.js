@@ -7,20 +7,19 @@ const MatchSchedule = () => {
     <div className="match-container">
       {matchData.map((match, index) => (
         <div key={match.id} className="match-card">
-          {/* Match Number and Date */}
           <div className="match-header">
-            <span className="match-number">MATCH {index + 1}</span>
-            <span className="match-date">{match.date}</span>
+            <div>
+              <span className="match-number">MATCH {index + 1}</span>
+              <span className="match-date">{match.date}</span>
+            </div>
+
+            <div className="match-info">
+              <span>
+                🕒 {match.time} | 📍 {match.stadium}
+              </span>
+            </div>
           </div>
 
-          {/* Match Time & Stadium */}
-          <div className="match-info">
-            <span>
-              🕒 {match.time} | 📍 {match.stadium}
-            </span>
-          </div>
-
-          {/* Teams */}
           <div className="teams-container">
             <div className="team">
               <img
@@ -31,19 +30,30 @@ const MatchSchedule = () => {
             </div>
             <span className="vs-text">VS</span>
             <div className="team">
-              <span>{match.team2.name}</span>
               <img
                 src={require(`../../assets/teamLogo/${match.team2.logo}`)}
                 alt={match.team2.name}
               />
+              <span>{match.team2.name}</span>
             </div>
           </div>
 
           <div className="matchesFooter">
-            <h6>KKR won by 28 runs.</h6>
-            <div className="button-container">
-              <button className="match-centre-btn">Match Centre</button>
-            </div>
+            {match.result ? (
+              <div className="matchResult">
+                <p>{match.result}</p>
+                <div className="impactPlayer">
+                  <img src="" alt="impactPlayer" />
+                  <p>Impact Player</p>
+                </div>
+                <div className="matchPlayer">
+                  <img src="" alt="playerOftheMatch" />
+                  <p>Player of the Match</p>
+                </div>
+              </div>
+            ) : (
+              <div className="match-centre-btn">Match Centre</div>
+            )}
           </div>
         </div>
       ))}

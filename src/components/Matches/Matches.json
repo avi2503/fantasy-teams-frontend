@@ -11,7 +11,8 @@
     "team2": {
       "name": "Royal Challengers Bengaluru",
       "logo": "RCB.png"
-    }
+    },
+    "result": "Kolkata Knight Riders 4 wickets"
   },
   {
     "id": 2,
@@ -39,46 +40,6 @@
     "team2": {
       "name": "Mumbai Indians",
       "logo": "MI.png"
-    }
-  },
-  {
-    "id": 2,
-    "date": "MAR, SUN 23",
-    "time": "3:30 pm IST",
-    "stadium": "Rajiv Gandhi International Stadium, Hyderabad",
-    "team1": {
-      "name": "Sunrisers Hyderabad",
-      "logo": "SRH.png"
-    },
-    "team2": {
-      "name": "Rajasthan Royals",
-      "logo": "RR.png"
-    }
-  },{
-    "id": 2,
-    "date": "MAR, SUN 23",
-    "time": "3:30 pm IST",
-    "stadium": "Rajiv Gandhi International Stadium, Hyderabad",
-    "team1": {
-      "name": "Sunrisers Hyderabad",
-      "logo": "SRH.png"
-    },
-    "team2": {
-      "name": "Rajasthan Royals",
-      "logo": "RR.png"
-    }
-  },{
-    "id": 2,
-    "date": "MAR, SUN 23",
-    "time": "3:30 pm IST",
-    "stadium": "Rajiv Gandhi International Stadium, Hyderabad",
-    "team1": {
-      "name": "Sunrisers Hyderabad",
-      "logo": "SRH.png"
-    },
-    "team2": {
-      "name": "Rajasthan Royals",
-      "logo": "RR.png"
     }
   }
 ]

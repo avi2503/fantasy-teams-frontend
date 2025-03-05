@@ -9,7 +9,7 @@ export default function TeamDetails() {
   const handleTeamClick = (team) => {
     setSelectedTeam(team);
   };
-  
+
   return (
     <div className="teamDetails lg-expand">
       <div className="teamRow">
@@ -21,6 +21,7 @@ export default function TeamDetails() {
                 selectedTeam && selectedTeam.id === team.id ? "selected" : ""
               }`}
               key={team.id}
+              style={{ backgroundColor: `${team.color}` }}
               onClick={() => handleTeamClick(team)}
             >
               <img src={imagePath} alt={team.name} style={{ height: "5rem" }} />

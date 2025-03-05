@@ -9,78 +9,46 @@ export default function SelectedTeam({ selectedTeam }) {
         className="teamDetailsSection card"
         style={{ backgroundColor: `${selectedTeam.color}` }}
       >
-        <div className="w-25">
-          <p>{selectedTeam.team}</p>
-          <p>{selectedTeam.description}</p>
+        <div className="w-25 fw-bold">
+          <img
+            src={selectedTeam.image}
+            alt="captain"
+            stlye={{ height: "5rem" }}
+          />
           <p>{selectedTeam.titleYears}</p>
         </div>
-        <div className="w-75 d-flex flex-column align-items-center">
+        <div className="w-75 d-flex flex-column align-items-center fw-bold">
           <table>
             <tbody>
               <tr>
-                <td
-                  style={{
-                    width: "7rem",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
+                <td className="rowHeader">
                   Captain<span> : </span>
                 </td>
-                <td style={{ width: "20rem", paddingLeft: "0.5rem" }}>
-                  {selectedTeam.captain}
-                </td>
+                <td className="rowData">{selectedTeam.captain}</td>
               </tr>
               <tr>
-                <td
-                  style={{
-                    width: "7rem",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
+                <td className="rowHeader">
                   Coach<span> : </span>
                 </td>
-                <td style={{ width: "20rem", paddingLeft: "0.5rem" }}>
-                  {selectedTeam.coach}
-                </td>
+                <td className="rowData">{selectedTeam.coach}</td>
               </tr>
               <tr>
-                <td
-                  style={{
-                    width: "7rem",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
+                <td className="rowHeader">
                   Owner<span> : </span>
                 </td>
-                <td style={{ width: "20rem", paddingLeft: "0.5rem" }}>
-                  {selectedTeam.owner}
-                </td>
+                <td className="rowData">{selectedTeam.owner}</td>
               </tr>
               <tr>
-                <td
-                  style={{
-                    width: "7rem",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
+                <td className="rowHeader">
                   Home Venue<span> : </span>
                 </td>
-                <td style={{ width: "20rem", paddingLeft: "0.5rem" }}>
-                  {selectedTeam.homeVenue}
-                </td>
+                <td className="rowData">{selectedTeam.homeVenue}</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
+      
       <Squad selectedTeam={selectedTeam} />
     </div>
   );

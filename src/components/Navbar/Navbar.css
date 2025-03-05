@@ -1,7 +1,7 @@
 .navbar {
   padding: 0;
   margin: 0;
-  background-color: #031537;
+  background: linear-gradient(#031537);
   color: white;
 }
 
@@ -20,8 +20,10 @@
   padding: 1rem 0;
   width: 100%;
   color: white;
+  font-weight: bold;
 }
 
 .nav-item:hover {
-  background-color: white;
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.2));
+  color: #031537;
 }
