@@ -8,4 +8,5 @@ body {
   background: linear-gradient(to bottom, #031537, #06266f, #0a3ba0);
   height: 100vh;
   margin: 0;
+  overflow-y: auto;
 }

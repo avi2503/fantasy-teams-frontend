@@ -6,7 +6,7 @@ export default function Layout() {
   return (
     <div>
       <NavBar />
-      <main>
+      <main style={{height: "90vh", overflowY: "auto"}}>
         <Outlet />
       </main>
     </div>
