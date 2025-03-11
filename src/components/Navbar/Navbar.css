@@ -27,3 +27,8 @@
   background: linear-gradient(to top, white, rgba(255, 255, 255, 0.2));
   color: #031537;
 }
+
+.navbar-nav .nav-link.active {
+  background: linear-gradient(to top, white, rgba(255, 255, 255, 0.2));
+  color: #031537;
+}

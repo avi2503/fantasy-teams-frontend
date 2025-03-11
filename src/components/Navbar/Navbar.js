@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
@@ -6,17 +6,11 @@ import logo from "../../assets/Navbar/logo.png";
 
 export default function NavBar() {
   const navigate = useNavigate();
+  const [activePage, setActivePage] = useState("");
 
-  const handleHome = () => {
-    navigate("/");
-  };
-
-  const handleTeams = () => {
-    navigate("/teams");
-  };
-
-  const handleMatches = () => {
-    navigate("/matches");
+  const handleNavigation = (page) => {
+    setActivePage(page);
+    navigate(`/${page}`);
   };
 
   return (
@@ -45,17 +39,38 @@ export default function NavBar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <div className="navbar-nav">
-            <div className="nav-item nav-link" onClick={handleHome}>
+            <div
+              className={`nav-item nav-link ${
+                activePage === "home" ? "active" : ""
+              }`}
+              onClick={() => handleNavigation("home")}
+            >
               Home
             </div>
-            <div className="nav-item nav-link" onClick={handleTeams}>
+            <div
+              className={`nav-item nav-link ${
+                activePage === "teams" ? "active" : ""
+              }`}
+              onClick={() => handleNavigation("teams")}
+            >
               Teams
             </div>
-            <div className="nav-item nav-link">Players</div>
-            <div className="nav-item nav-link" onClick={handleMatches}>
+            <div
+              className={`nav-item nav-link ${
+                activePage === "matches" ? "active" : ""
+              }`}
+              onClick={() => handleNavigation("matches")}
+            >
               Matches
             </div>
-            <div className="nav-item nav-link">About Us</div>
+            <div
+              className={`nav-item nav-link ${
+                activePage === "aboutus" ? "active" : ""
+              }`}
+              onClick={() => handleNavigation("aboutus")}
+            >
+              About Us
+            </div>
           </div>
         </div>
       </div>
